@@ -8,7 +8,7 @@ public class FileHandler {
 
     public void writeFile() throws FileOperationException{
         try {
-            Files.write(Paths.get( "/media/user/volume_d2/Work/Aston/Java/beginner_course/module_03/hw_files/files/test.txt"),
+            Files.write(Paths.get("/media/user/volume_d2/Work/Aston/Java/beginner_course/module_03/hw_files/files/test.txt"),
                     "Hello, World!\n".getBytes(StandardCharsets.UTF_8),
                     StandardOpenOption.CREATE);
         } catch (IOException e) {
@@ -18,7 +18,7 @@ public class FileHandler {
 
     public void readFile() throws FileOperationException{
         try {
-            String s = Files.readString(Paths.get( "/media/user/volume_d2/Work/Aston/Java/beginner_course/module_03/hw_files/files/test.txt"));
+            String s = Files.readString(Paths.get("/media/user/volume_d2/Work/Aston/Java/beginner_course/module_03/hw_files/files/test.txt"));
             System.out.println(s);
         } catch (IOException e) {
             throw new FileOperationException("Failed to read file", e);
