@@ -9,7 +9,7 @@ public class FileHandler {
     public void writeFile() throws FileOperationException{
         try {
             Files.write(Paths.get( "/media/user/volume_d2/Work/Aston/Java/beginner_course/module_03/hw_files/files/test.txt"),
-                    "Hello, World\n".getBytes(StandardCharsets.UTF_8),
+                    "Hello, World!\n".getBytes(StandardCharsets.UTF_8),
                     StandardOpenOption.CREATE);
         } catch (IOException e) {
             throw new FileOperationException("Failed to write file", e);
@@ -27,6 +27,7 @@ public class FileHandler {
 
     public static void main(String[] args) throws FileOperationException{
         FileHandler handler = new FileHandler();
+
         handler.writeFile();
         handler.readFile();
     }
